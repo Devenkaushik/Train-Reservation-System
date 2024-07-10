@@ -6,36 +6,94 @@
     <title>User Login - E-Trains</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #007bff; /* Blue navbar background */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff; /* White text for navbar items */
+        }
         .container {
             margin-top: 50px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+        }
+        .card-header {
+            background-color: #007bff; /* Blue header background */
+            color: #fff; /* White text */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .form-control {
+            border-radius: 20px; /* Rounded corners for input */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Blue button background */
+            border: none;
+            border-radius: 20px; /* Rounded corners for button */
+            padding: 10px 30px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">E-Trains</a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="UserLogin.html">Login as User</a></li>
-                <li class="nav-item"><a class="nav-link" href="UserRegister.html">New User Register</a></li>
-                <li class="nav-item"><a class="nav-link" href="AdminLogin.html">Login as Admin</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UserLogin.html">Login as User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UserRegister.html">New User Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminLogin.html">Login as Admin</a>
+                </li>
             </ul>
         </div>
     </nav>
+
     <div class="container">
-        <h2 class="mb-4">User Login</h2>
-        <form action="userlogin" method="post">
-            <div class="form-group">
-                <label for="uname">UserName</label>
-                <input type="text" class="form-control" id="uname" name="uname" placeholder="Enter Your EmailId" required>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        User Login
+                    </div>
+                    <div class="card-body">
+                        <form action="userlogin" method="post">
+                            <div class="form-group">
+                                <label for="uname">Email Address</label>
+                                <input type="email" class="form-control" id="uname" name="uname" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pword">Password</label>
+                                <input type="password" class="form-control" id="pword" name="pword" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="pword">Password</label>
-                <input type="password" class="form-control" id="pword" name="pword" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
