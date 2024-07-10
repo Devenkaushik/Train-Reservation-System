@@ -1,55 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Trains</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
-		<div class="home">
-			<p class="menu">
-				<a href="AdminHome.html">Home</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminviewtrainfwd">View Trains</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminsearchtrainfwd">Search By TrainNo</a>
-			</p>
-		</div>
-
-		<div class="home">
-			<p class="menu">
-				<a href="addtrainfwd">Add Train</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="cancletrainfwd">Delete Train </a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="updatetrain">Update Train Details</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminlogout">Logout</a>
-			</p>
-		</div>
-
-		<div class='tab'>
-			<p class='menu'>Hey, Admin ! Welcome to our new NTBS Website</p>
-		</div>
-	</header>
-
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Trains</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="AdminHome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminviewtrainfwd">View Trains</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminsearchtrainfwd">Search By TrainNo</a></li>
+                <li class="nav-item"><a class="nav-link" href="addtrainfwd">Add Train</a></li>
+                <li class="nav-item"><a class="nav-link" href="cancletrainfwd">Delete Train</a></li>
+                <li class="nav-item"><a class="nav-link" href="updatetrain">Update Train Details</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminlogout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="mb-4">Hey, Admin! Welcome to our new NTBS Website</h2>
+        <p>Here you can view, add, update, and delete train details.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

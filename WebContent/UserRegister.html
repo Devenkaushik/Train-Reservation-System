@@ -1,50 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>LOGIN</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - E-Trains</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
-		<div class="main">
-			<span class="menu"> <a href="UserLogin.html">Login as User</a>
-			</span> <span class="menu"> <a href="UserRegister.html">New User
-					Register</a>
-			</span> <span class="menu"> <a href="AdminLogin.html">Login as
-					Admin</a>
-			</span>
-		</div>
-	</header>
-	<table class="tab brown hd">
-		<tr>
-			<td>New User Registration</td>
-		</tr>
-	</table>
-
-	<table class="tab green">
-
-		<tr>
-			<td>
-				<form action="userreg" method="post">
-					Email Id : <input type="email" name="mailid"
-						placeholder="Enter your emailId" required><br /> <br />
-					Password : <input type="password" name="pword" required><br />
-					<br /> FirstName: <input type="text" name="firstname" required><br />
-					<br /> Last Name: <input type="text" name="lastname" required><br />
-					<br /> Address : <input type="text" name="address" required><br />
-					<br /> Phone No : <input type="number" name="phoneno" required><br />
-					<br /> Photo : <input type="file" name="userphoto"><br />
-					<br /> <input type="submit"
-						value=" I AGREE FOR ALL TERMS & CONDITIONS ! REGISTER ME "
-						style="text-align: center">
-				</form>
-			</td>
-
-		</tr>
-	</table>
-
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Trains</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="UserLogin.html">Login as User</a></li>
+                <li class="nav-item"><a class="nav-link" href="UserRegister.html">New User Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="AdminLogin.html">Login as Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="mb-4">New User Registration</h2>
+        <form action="userreg" method="post">
+            <div class="form-group">
+                <label for="mailid">Email Id</label>
+                <input type="email" class="form-control" id="mailid" name="mailid" placeholder="Enter your emailId" required>
+            </div>
+            <div class="form-group">
+                <label for="pword">Password</label>
+                <input type="password" class="form-control" id="pword" name="pword" required>
+            </div>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneno">Phone No</label>
+                <input type="number" class="form-control" id="phoneno" name="phoneno" required>
+            </div>
+            <div class="form-group">
+                <label for="userphoto">Photo</label>
+                <input type="file" class="form-control-file" id="userphoto" name="userphoto">
+            </div>
+            <input type="submit" class="btn btn-primary" value="I AGREE FOR ALL TERMS & CONDITIONS! REGISTER ME">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

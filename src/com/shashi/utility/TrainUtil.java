@@ -85,7 +85,10 @@ public class TrainUtil {
 	}
 
 	public static String getCurrentUserName(HttpServletRequest req) {
+//		String username = 
 		return (String) req.getSession().getAttribute("uName");
+//		username = username.split("@")[0];
+//		return username;
 	}
 
 	public static String getCurrentUserEmail(HttpServletRequest req) {

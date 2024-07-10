@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>LOGIN</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - E-Trains</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
-		<div class="main">
-			<span class="menu">
-				<a href="UserLogin.html">Login as User</a>
-			</span>
-			<span class="menu">
-				<a href="UserRegister.html">New User Register</a>
-			</span>
-			<span class="menu">
-				<a href="AdminLogin.html">Login as Admin</a>
-			</span>
-		</div>
-	</header>
-	<div class="tab green">User Login</div>
-	<form action="userlogin" class="tab brown" method="post">
-		<br /> UserName: <input type="text" name="uname"
-			placeholder="Enter Your EmailId"> <br /> <br /> Password: <input
-			type="password" name="pword"> <br /> <br /> <input
-			type="submit" value=" LOGIN "><br />
-
-	</form>
-	<br />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Trains</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="UserLogin.html">Login as User</a></li>
+                <li class="nav-item"><a class="nav-link" href="UserRegister.html">New User Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="AdminLogin.html">Login as Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="mb-4">User Login</h2>
+        <form action="userlogin" method="post">
+            <div class="form-group">
+                <label for="uname">UserName</label>
+                <input type="text" class="form-control" id="uname" name="uname" placeholder="Enter Your EmailId" required>
+            </div>
+            <div class="form-group">
+                <label for="pword">Password</label>
+                <input type="password" class="form-control" id="pword" name="pword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,62 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>E-Trains</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Train - E-Trains</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="UserHome_Css.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
-		<div class="home">
-			<p class="menu">
-				<a href="AdminHome.html">Home</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminviewtrainfwd">View Trains</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminsearchtrainfwd">Search By TrainNo</a>
-			</p>
-		</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Trains</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="AdminHome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminviewtrainfwd">View Trains</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminsearchtrainfwd">Search By TrainNo</a></li>
+                <li class="nav-item"><a class="nav-link" href="addtrainfwd">Add Train</a></li>
+                <li class="nav-item"><a class="nav-link" href="cancletrainfwd">Delete Train</a></li>
+                <li class="nav-item"><a class="nav-link" href="updatetrain">Update Train Details</a></li>
+                <li class="nav-item"><a class="nav-link" href="adminlogout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
-		<div class="home">
-			<p class="menu">
-				<a href="addtrainfwd">Add Train</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="cancletrainfwd">Delete Train </a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="updatetrain">Update Train Details</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminlogout">Logout</a>
-			</p>
-		</div>
-	</header>
-	<div class='main'>
-		<p class='menu'> Add Trains </p>
-	</div>
-	<form class="tab" action="adminaddtrain" method="post">
-		<br /> Train Number:<input type="text" name="trainno"><br />
-		<br /> Train Name: <input type="text" name="trainname"><br />
-		<br /> From Station: <input type="text" name="fromstation"><br />
-		<br /> To Station: <input type="text" name="tostation"><br />
-		<br /> Available: <input type="text" name="available"><br />
-		<br /> Fare (INR): <input type="text" name="fare"><br />
-		<br /> <input type="submit" value=" ADD TRAIN ">
-	</form>
-	<br />
+    <div class="container">
+        <h2 class="mb-4 text-center">Add Train</h2>
+        <form action="adminaddtrain" method="post" class="p-4 border rounded bg-light">
+            <div class="form-group">
+                <label for="trainno">Train Number</label>
+                <input type="text" class="form-control" id="trainno" name="trainno" required>
+            </div>
+            <div class="form-group">
+                <label for="trainname">Train Name</label>
+                <input type="text" class="form-control" id="trainname" name="trainname" required>
+            </div>
+            <div class="form-group">
+                <label for="fromstation">From Station</label>
+                <input type="text" class="form-control" id="fromstation" name="fromstation" required>
+            </div>
+            <div class="form-group">
+                <label for="tostation">To Station</label>
+                <input type="text" class="form-control" id="tostation" name="tostation" required>
+            </div>
+            <div class="form-group">
+                <label for="available">Available Seats</label>
+                <input type="number" class="form-control" id="available" name="available" required>
+            </div>
+            <div class="form-group">
+                <label for="fare">Fare (INR)</label>
+                <input type="number" class="form-control" id="fare" name="fare" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Add Train</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
