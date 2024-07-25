@@ -3,68 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Trains - Admin Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Admin Login - E-Trains</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f8f9fa; /* Light gray background */
+            font-family: 'Arial', sans-serif;
         }
-        .header {
+        .navbar {
+            background-color: #ff6700; /* Orange navbar background */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff; /* White text for navbar items */
+            transition: color 0.3s ease; /* Smooth transition for text color */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #e0e0e0; /* Light gray text on hover */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+        }
+        .card-header {
+            background-color: #ff6700; /* Orange header background */
+            color: #fff; /* White text */
             text-align: center;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            margin-top: 20px;
-            color: #343a40;
-        }
-        .main {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .main .menu a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        .login-form {
-            max-width: 400px;
-            margin: 0 auto;
-            background: white;
+            font-size: 24px;
+            font-weight: bold;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .login-form input {
-            margin-bottom: 15px;
+        .card-body {
+            padding: 30px;
+        }
+        .form-control {
+            border-radius: 20px; /* Rounded corners for input */
+        }
+        .btn-primary {
+            background-color: #ff6700; /* Orange button background */
+            border: none;
+            border-radius: 20px; /* Rounded corners for button */
+            padding: 10px 30px;
+        }
+        .btn-primary:hover {
+            background-color: #cc5500; /* Darker orange on hover */
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>National Ticket Booking Spot</h1>
-        <div class="main">
-            <span class="menu"><a href="UserLogin.html">Login as User</a></span>
-            <span class="menu"><a href="UserRegister.html">New User Register</a></span>
-            <span class="menu"><a href="AdminLogin.html">Login as Admin</a></span>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">E-Trains</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="UserLogin.html">User Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UserRegister.html">User Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminLogin.html">Admin Login</a>
+                </li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <div class="login-form">
-        <h2 class="text-center">Admin Login</h2>
-        <form action="adminlogin" method="post">
-            <div class="mb-3">
-                <label for="uname" class="form-label">Username</label>
-                <input type="text" class="form-control" name="uname" id="uname" placeholder="Enter Your Email ID">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Admin Login
             </div>
-            <div class="mb-3">
-                <label for="pword" class="form-label">Password</label>
-                <input type="password" class="form-control" name="pword" id="pword">
+            <div class="card-body">
+                <form action="adminlogin" method="post">
+                    <div class="form-group">
+                        <label for="uname">Username</label>
+                        <input type="text" class="form-control" name="uname" id="uname" placeholder="Enter Your Email ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pword">Password</label>
+                        <input type="password" class="form-control" name="pword" id="pword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">LOGIN</button>
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary w-100">LOGIN</button>
-        </form>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

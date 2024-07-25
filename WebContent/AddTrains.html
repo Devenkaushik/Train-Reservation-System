@@ -5,21 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Train - E-Trains</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="UserHome_Css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-        .container {
-            margin-top: 20px;
+        body {
+            font-family: 'Montserrat', sans-serif; /* Using 'Montserrat' font from Google Fonts */
+            background-image: url('background.jpg'); /* Relative path to your local image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Prevent background from scrolling */
+            height: 100vh; /* Set full height of viewport */
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .navbar {
+            background-color: #ff6700 !important; /* Override any other styles */
+        }
+        .navbar .navbar-brand {
+            color: white; /* Change navbar brand text color */
+            font-weight: bold;
+        }
+        .navbar .navbar-nav .nav-link {
+            color: white; /* Change navbar links text color */
+            font-weight: bold; /* Make navbar links bold */
+            transition: all 0.3s ease; /* Smooth transition */
+            font-size: 16px; /* Default font size */
+        }
+        .navbar .navbar-nav .nav-link:hover {
+            font-size: 18px; /* Increase font size on hover */
         }
         .navbar-nav .nav-item {
             margin-right: 15px;
         }
-        form input[type="submit"] {
-            width: 100%;
+        .container {
+            margin-top: 50px;
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif; /* Using 'Montserrat' font */
+            text-align: center;
+            margin-bottom: 16px; /* Adjust the margin as needed */
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 900;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            border-radius: 20px; /* Rounded corners */
+        }
+        .card-header {
+            background-color: #ff6700; /* Orange header background */
+            color: #fff; /* White text */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border-top-left-radius: 20px; /* Rounded corners */
+            border-top-right-radius: 20px; /* Rounded corners */
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .form-control {
+            border-radius: 20px; /* Rounded corners for input */
+        }
+        .btn-success {
+            background-color: #ff6700; /* Orange button background */
+            border: none;
+            border-radius: 20px; /* Rounded corners for button */
+            padding: 10px 30px;
+        }
+        .btn-success:hover {
+            background-color: #cc5500; /* Darker orange on hover */
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">E-Trains</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
@@ -35,34 +98,40 @@
     </nav>
 
     <div class="container">
-        <h2 class="mb-4 text-center">Add Train</h2>
-        <form action="adminaddtrain" method="post" class="p-4 border rounded bg-light">
-            <div class="form-group">
-                <label for="trainno">Train Number</label>
-                <input type="text" class="form-control" id="trainno" name="trainno" required>
+        <div class="card">
+            <div class="card-header">
+                Add Train
             </div>
-            <div class="form-group">
-                <label for="trainname">Train Name</label>
-                <input type="text" class="form-control" id="trainname" name="trainname" required>
+            <div class="card-body">
+                <form action="adminaddtrain" method="post">
+                    <div class="form-group">
+                        <label for="trainno">Train Number</label>
+                        <input type="text" class="form-control" id="trainno" name="trainno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainname">Train Name</label>
+                        <input type="text" class="form-control" id="trainname" name="trainname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fromstation">From Station</label>
+                        <input type="text" class="form-control" id="fromstation" name="fromstation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tostation">To Station</label>
+                        <input type="text" class="form-control" id="tostation" name="tostation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="available">Available Seats</label>
+                        <input type="number" class="form-control" id="available" name="available" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fare">Fare (INR)</label>
+                        <input type="number" class="form-control" id="fare" name="fare" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Add Train</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="fromstation">From Station</label>
-                <input type="text" class="form-control" id="fromstation" name="fromstation" required>
-            </div>
-            <div class="form-group">
-                <label for="tostation">To Station</label>
-                <input type="text" class="form-control" id="tostation" name="tostation" required>
-            </div>
-            <div class="form-group">
-                <label for="available">Available Seats</label>
-                <input type="number" class="form-control" id="available" name="available" required>
-            </div>
-            <div class="form-group">
-                <label for="fare">Fare (INR)</label>
-                <input type="number" class="form-control" id="fare" name="fare" required>
-            </div>
-            <button type="submit" class="btn btn-success btn-block">Add Train</button>
-        </form>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
