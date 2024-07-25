@@ -1,5 +1,3 @@
-Train Ticket Reservation System
-
 Overview
 
 The Train Ticket Reservation System represents a pinnacle of modern web application design, meticulously crafted to revolutionize the way users interact with train booking services. This sophisticated system is engineered to deliver a seamless, user-friendly experience, ensuring that every aspect of train travel booking is handled with precision and efficiency. From viewing train schedules and searching for specific trains to checking seat availability and inquiring about train timings and fares, this application covers all facets of train travel management. It offers a secure and reliable platform for online seat reservations, ensuring both users and administrators can perform their tasks with ease and confidence.
@@ -74,8 +72,6 @@ Software and Tools
     Tomcat v8.0+: The Apache Tomcat server hosts the web application, providing a reliable and efficient runtime environment.
     Oracle (SQL) / SQL PLUS: These tools are used for managing the Oracle database, ensuring that all data is stored and retrieved efficiently.
     Oracle SQL Developer: This development tool supports the design and management of the Oracle database, providing a user-friendly interface for database administration.
-
-Project Leadership
 
 For any suggestions or improvements, please feel free to reach out.
 
