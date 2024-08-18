@@ -74,19 +74,64 @@ The system is designed to enhance the user booking experience:
 Below are screenshots showcasing various aspects of the Train Ticket Reservation System:
 
 1. **Homepage**
-   ![Homepage Screenshot](C:\Users\samik\Desktop\Projects\Train-Reservation-System\Screenshots)
+   ![Homepage Screenshot](Screenshots/welcome%20screen.png)
 
 2. **Train Search**
-   ![Train Search Screenshot](C:\Users\samik\Desktop\Projects\Train-Reservation-System\Screenshots)
+   ![Train Search Screenshot](Screenshots/adminsearchtrain.png)
 
 3. **Seat Availability**
-   ![Seat Availability Screenshot](C:\Users\samik\Desktop\Projects\Train-Reservation-System\Screenshots)
+   ![Seat Availability Screenshot](Screenshots/seats%20availability.png)
 
-4. **Admin login**
-   ![Admin login Screenshot](C:\Users\samik\Desktop\Projects\Train-Reservation-System\Screenshots)
+4. **Admin Login**
+   ![Admin Login Screenshot](Screenshots/adminlogin.png)
 
-5. **Payment Gateaway**
-   ![Payment screen](C:\Users\samik\Desktop\Projects\Train-Reservation-System\Screenshots)
+5. **Payment Gateway**
+   ![Payment Gateway Screenshot](Screenshots/payment%20gateaway.png)
+
+6. **Book Trains**
+   ![Book Trains Screenshot](Screenshots/booktrains.png)
+
+7. **User Registration**
+   ![User Registration Screenshot](Screenshots/newuserregistration.png)
+
+8. **Booking History**
+   ![Booking History Screenshot](Screenshots/train%20booking%20history.png)
+
+9. **User Profile**
+   ![User Profile Screenshot](Screenshots/userviewprofile.png)
+
+10. **Admin Add Train**
+    ![Admin Add Train Screenshot](Screenshots/adminaddtrain.png)
+
+11. **Admin Update Train**
+    ![Admin Update Train Screenshot](Screenshots/adminupdatetrain.png)
+
+12. **Admin Cancel Train**
+    ![Admin Cancel Train Screenshot](Screenshots/admincanceltrain.png)
+
+13. **Admin Logout**
+    ![Admin Logout Screenshot](Screenshots/adminlogout.png)
+
+14. **Admin Welcome Screen**
+    ![Admin Welcome Screen Screenshot](Screenshots/adminwelcomescreen.png)
+
+15. **Admin View Train**
+    ![Admin View Train Screenshot](Screenshots/adminviewtrain.png)
+
+16. **User Login**
+    ![User Login Screenshot](Screenshots/userlogin.png)
+
+17. **User Search Train**
+    ![User Search Train Screenshot](Screenshots/usersearchtrain.png)
+
+18. **User Update Profile**
+    ![User Update Profile Screenshot](Screenshots/userupdateprofile.png)
+
+19. **User View Trains**
+    ![User View Trains Screenshot](Screenshots/userviewtrains.png)
+
+20. **User Change Password**
+    ![User Change Password Screenshot](Screenshots/userchangepassword.png)
 
 ---
 
